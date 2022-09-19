@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'core/models/task_provider.dart';
+import 'core/storage/shared_preferences_manager.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setSharedPreferencesInstance();
+
+  return runApp(
+    const MyToDoListApp(),
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyToDoListApp extends StatelessWidget {
+  const MyToDoListApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'To Do List',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('To Do List'),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => TaskProvider(),
         ),
-        body: const Center(
-          child: Text(
-            'To Do List Screen',
-          ),
-        ),
+      ],
+      child: const MaterialApp(
+        home: SizedBox(),
       ),
     );
   }
