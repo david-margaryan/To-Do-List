@@ -4,7 +4,6 @@ import 'package:to_do/core/models/task_provider.dart';
 import 'package:to_do/presentation/ui/screens/add_task_screen.dart';
 import 'package:to_do/presentation/ui/widgets/tasks_list.dart';
 
-
 /// Created by David
 /// Date: 19.09.22
 
@@ -50,7 +49,7 @@ class TasksScreen extends StatelessWidget {
                   '${Provider.of<TaskProvider>(context).taskCount} Tasks',
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 18.0,
                   ),
                 ),
               ],

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do/presentation/ui/widgets/task_tile.dart';
-
 import '../../../core/models/task_provider.dart';
 
 /// Created by David
 /// Date: 19.09.22
-
+///
 /// Create a Task List for Tasks
 
 class TasksList extends StatelessWidget {
