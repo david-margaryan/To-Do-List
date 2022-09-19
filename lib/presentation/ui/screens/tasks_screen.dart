@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do/core/models/task_provider.dart';
-import '../widgets/tasks_list.dart';
+import 'package:to_do/presentation/ui/screens/add_task_screen.dart';
+import 'package:to_do/presentation/ui/widgets/tasks_list.dart';
+
 
 /// Created by David
 /// Date: 19.09.22
@@ -85,7 +87,7 @@ class TasksScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewInsets.bottom,
                 ),
-                child: const SizedBox(),
+                child: const AddTaskScreen(),
               ),
             ),
           );
