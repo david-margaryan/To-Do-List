@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:to_do/presentation/ui/screens/tasks_screen.dart';
 import 'core/models/task_provider.dart';
 import 'core/storage/shared_preferences_manager.dart';
 
@@ -24,7 +25,7 @@ class MyToDoListApp extends StatelessWidget {
         ),
       ],
       child: const MaterialApp(
-        home: SizedBox(),
+        home: TasksScreen(),
       ),
     );
   }
